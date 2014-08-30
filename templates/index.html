@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+
+{% block content %}
+
+<!-- Article List -->
+<h3>Articles</h3>
+{% for article in articles %}
+<div class = "row">
+  <div class = "col-sm-3">
+    <span class = "date">{{article.date}}</span>
+  </div>
+  <div class = "col-sm-6">
+   <a href = {{article.url}}>{{article.title}}</a>
+  </div>
+  <div class = "col-md-3">
+    {% for tag in article.tags %}
+    {{tag}}
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<!-- Project List -->
+<h3>Projects</h3>
+<div class = "row">
+  <div class = "col-sm-3">
+    <a href = "https://github.com/dan-hill/robot-controller">robot-controller</a>
+  </div>
+  <div class = "col-sm-6">
+    Web interface for serial commands.
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-sm-3">
+    <a href = "https://github.com/dan-hill/route53-update">route53-update</a>
+  </div>
+  <div class = "col-sm-6">
+    Update AWS Route53 hosted zone.
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-sm-3">
+    <a href = "https://github.com/dan-hill/DijkstraUniversity">Dijkstra University</a>
+  </div>
+  <div class = "col-sm-6">
+    iOS implementation of Dijkstra's Algorithm.
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-sm-3">
+    <a href = "https://github.com/dan-hill/ip-notify">ip-notify</a>
+  </div>
+  <div class = "col-sm-6">
+    Email notifications of public IP change.
+  </div>
+</div>
+
+<!-- Contact Information -->
+<h3>Contact</h3>
+<div class = "row">
+  <div class = "col-sm-3">
+    email
+  </div>
+  <div class = "col-sm-6">
+    <a href = "mailto:dan@danhill.us">dan@danhill.us</a>
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-sm-3">
+    Twitter
+  </div>
+  <div class = "col-sm-6">
+    <a href = "http://twitter.com/danhill">http://twitter.com/danhill</a>
+  </div>
+</div>
+
+<div class = "row">
+  <div class = "col-sm-3">
+    GitHub
+  </div>
+  <div class = "col-sm-6">
+    <a href = "http://github.com/dan-hill">http://github.com/dan-hill</a>
+  </div>
+</div>
+
+{% endblock %}
