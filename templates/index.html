@@ -11,9 +11,9 @@
     <span class = "date">{{article.date}}</span>
   </div>
   <div class = "col-sm-6">
-   <a href = {{article.url}}>{{article.title}}</a>
+    <a href = "{{ SITEURL }}/{{ article.url }}">{{article.title}}</a>
   </div>
-  <div class = "col-md-3">
+  <div class = "col-sm-3">
     {% for tag in article.tags %}
     {{tag}}
     {% endfor %}

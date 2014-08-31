@@ -5,4 +5,17 @@
 body {
     font-family:'Inconsolata';
 }
+ul {
+    list-style: none;
+}
 
+li {
+    overflow: visible;
+    padding-left: 17px;
+    position: relative;
+}
+li:before {
+    content: "+";
+    left: 0;
+    position: absolute;
+}
